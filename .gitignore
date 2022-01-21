@@ -24,6 +24,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# session whatsapp
+session.json
+
 # local env files
 .env.local
 .env.development.local
