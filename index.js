@@ -51,10 +51,12 @@ const formatAddressIn = (address_in, broker) => {
   let pickup = '';
   address_in.map((address) => {
     const direction = address.address_id;
+    const date = new Date(address.date);
+    const time = new Date(address.time);
     if(address){
       pickup = `${pickup}
-${address.date}
-${address.time}
+${date.toISOString().split('T')[0]}
+${time.toISOString().split('T')[1].replace(/\..+/, '')}
 
 ${direction.title}
 ${direction.address}
@@ -75,17 +77,19 @@ const formatAddressOut = (address_out, broker) => {
   let delivery = '';
   address_out.map((address) => {
     const direction = address.address_id;
+    const date = new Date(address.date);
+    const time = new Date(address.time);
     if(address){
       delivery = `${delivery}
-${address.date}
-${address.time}
+${date.toISOString().split('T')[0]}
+${time.toISOString().split('T')[1].replace(/\..+/, '')}
 
 ${direction.title}
 ${direction.address}
 ${direction.address2} ${direction.zipCode}
 
 DELIVERYPO# 
-${direction.refNumber}
+${address.refNumber?address.refNumber:0}
 
 Broker: ${broker.brokerName} ${broker.mcNumber}`;
     }

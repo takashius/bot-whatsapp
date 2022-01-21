@@ -4,8 +4,6 @@ const qrcode = require("qrcode-terminal");
 const { Client } = require("whatsapp-web.js");
 
 const SESSION_FILE_PATH = "./session.json";
-const country_code = process.env.COUNTRY_CODE;
-const number = process.env.NUMBER;
 
 let sessionData;
 if (fs.existsSync(SESSION_FILE_PATH)) {
