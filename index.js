@@ -11,7 +11,7 @@ webApp.use(bodyParser.urlencoded({
 webApp.use(bodyParser.json());
 webApp.use(cors());
 
-const PORT = 80;
+const PORT = 3000;
 
 webApp.get('/', (req, res) => {
   res.send(`Hello World.!`);
