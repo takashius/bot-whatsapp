@@ -11,7 +11,7 @@ webApp.use(bodyParser.urlencoded({
 webApp.use(bodyParser.json());
 webApp.use(cors());
 
-const PORT = process.env.PORT;
+const PORT = 80;
 
 webApp.get('/', (req, res) => {
   res.send(`Hello World.!`);
@@ -99,6 +99,6 @@ Broker: ${broker.brokerName} ${broker.mcNumber}`;
 }
 
 // Start the server
-webApp.listen(80, () => {
-  console.log(`Server is up and running at 80`);
+webApp.listen(PORT, () => {
+  console.log(`Server is up and running at ${PORT}`);
 });
