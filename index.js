@@ -1,6 +1,6 @@
 const express = require('express');
 const { add } = require('nodemon/lib/rules');
-const wa = require('./bot-whatsapp');
+//const wa = require('./bot-whatsapp');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
