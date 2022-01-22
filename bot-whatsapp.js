@@ -14,7 +14,7 @@ const client = new Client({
   session: sessionData,
 });
 
-client.initialize().catch(console.log);
+client.initialize();
 
 client.on("qr", (qr) => {
   qrcode.generate(qr, { small: true });
