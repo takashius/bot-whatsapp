@@ -10,9 +10,10 @@ if (fs.existsSync(SESSION_FILE_PATH)) {
   sessionData = require(SESSION_FILE_PATH);
 }
 
-const client = new Client({
-  session: sessionData
-});
+// const client = new Client({
+//   session: sessionData
+// });
+const client = new Client({ puppeteer: { headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] }, session: sessionData });
 
 client.initialize();
 
