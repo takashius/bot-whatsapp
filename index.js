@@ -99,6 +99,6 @@ Broker: ${broker.brokerName} ${broker.mcNumber}`;
 }
 
 // Start the server
-webApp.listen(PORT, () => {
-  console.log(`Server is up and running at ${PORT}`);
+webApp.listen(80, () => {
+  console.log(`Server is up and running at 80`);
 });
