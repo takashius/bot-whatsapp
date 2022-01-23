@@ -25,7 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # session whatsapp
-session.json
+# session.json
 
 # local env files
 .env.local
