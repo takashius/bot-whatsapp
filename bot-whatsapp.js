@@ -43,9 +43,9 @@ client.on("ready", () => {
 
 client.on("message", message => {
   if (message.body === "Te quiero") {
-    client.sendMessage(message.from, `*Yo tambien*
-    _Otra parte_ 
-    🥰😍😘`);
+    // client.sendMessage(message.from, `*Yo tambien*
+    // _Otra parte_ 
+    // 🥰😍😘`);
     // client.sendMessage('584125557916@c.us', '*TE AMO* 🥰😍😘 (con emoticones)');
     // client.sendMessage('5491121925253@c.us', 'Test numero personalizado desde api 🥰😍😘');
   }
